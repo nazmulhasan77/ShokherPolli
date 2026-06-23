@@ -10,19 +10,22 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.3.1",
+    "@dataconnect/generated": "file:src/dataconnect-generated",
+    "firebase": "^12.15.0",
     "framer-motion": "^12.41.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-icons": "^5.6.0",
-    "react-router-dom": "^7.18.0",
-    "tailwindcss": "^4.3.1"
+    "react-router-dom": "^7.18.0"
   },
   "devDependencies": {
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.2",
+    "autoprefixer": "^10.5.1",
     "oxlint": "^1.69.0",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.14",
     "vite": "^8.1.0"
   }
 }

@@ -44,14 +44,14 @@ const Home = () => {
       <Hero />
 
       {/* Features Section */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-16 sm:py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             badge="Why Choose Us"
             title="Our Features"
             subtitle="Why choose Shokher Polli for your agricultural and entrepreneurial journey"
           />
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -61,13 +61,13 @@ const Home = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group text-center"
               >
-                <div className={`w-24 h-24 bg-gradient-to-br ${feature.color} rounded-3xl flex items-center justify-center mx-auto mb-6 text-white shadow-xl group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300`}>
-                  <feature.icon className="text-3xl" />
+                <div className={`w-20 h-20 sm:w-24 bg-gradient-to-br ${feature.color} rounded-3xl flex items-center justify-center mx-auto mb-5 sm:mb-6 text-white shadow-xl group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300`}>
+                  <feature.icon className="text-2xl sm:text-3xl" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-green-700 transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 group-hover:text-green-700 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -75,14 +75,14 @@ const Home = () => {
       </section>
 
       {/* Ecosystem Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-green-50 to-emerald-50">
+      <section className="py-16 sm:py-20 lg:py-28 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             badge="Our Services"
             title="Our Ecosystem"
             subtitle="Explore the diverse range of initiatives under Shokher Polli"
           />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {ecosystemData.slice(0, 6).map((item, index) => (
               <EcosystemCard key={index} {...item} index={index} />
             ))}
@@ -91,14 +91,14 @@ const Home = () => {
       </section>
 
       {/* Marketplace Section */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-16 sm:py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             badge="Fresh Products"
             title="From Our Marketplace"
             subtitle="Fresh, organic products directly from our farms"
           />
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {productData.slice(0, 4).map((product, index) => (
               <ProductCard key={product.id} {...product} index={index} />
             ))}
@@ -107,14 +107,14 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-emerald-50 to-teal-50">
+      <section className="py-16 sm:py-20 lg:py-28 bg-gradient-to-br from-emerald-50 to-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             badge="What Makes Us Different"
             title="Why Choose Us"
             subtitle="What makes Shokher Polli different from others"
           />
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {whyChooseUs.map((item, index) => (
               <motion.div
                 key={index}
@@ -123,14 +123,14 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.02 }}
-                className="group flex gap-6 bg-gradient-to-br from-white to-green-50/50 p-8 rounded-3xl shadow-xl hover:shadow-2xl border border-green-100"
+                className="group flex gap-4 sm:gap-6 bg-gradient-to-br from-white to-green-50/50 p-6 sm:p-8 rounded-3xl shadow-xl hover:shadow-2xl border border-green-100"
               >
-                <div className="text-6xl group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
+                <div className="text-5xl sm:text-6xl group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-green-700 transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 group-hover:text-green-700 transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -139,23 +139,23 @@ const Home = () => {
       </section>
 
       {/* Vision & Mission Section */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-16 sm:py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl p-10 text-white shadow-2xl relative overflow-hidden"
+              className="bg-gradient-to-br from-green-600 to-emerald-700 rounded-3xl p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute top-0 right-0 w-32 h-32 sm:w-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
               <div className="relative">
-                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
-                  <FaEye className="text-4xl" />
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-5 sm:mb-6">
+                  <FaEye className="text-3xl sm:text-4xl" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-                <p className="text-green-100 text-lg leading-relaxed">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Our Vision</h3>
+                <p className="text-green-100 text-sm sm:text-lg leading-relaxed">
                   To create a self-sufficient rural Bangladesh where every farmer and entrepreneur can thrive with dignity, prosperity, and sustainable practices.
                 </p>
               </div>
@@ -165,15 +165,15 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-emerald-600 to-green-700 rounded-3xl p-10 text-white shadow-2xl relative overflow-hidden"
+              className="bg-gradient-to-br from-emerald-700 to-green-800 rounded-3xl p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden"
             >
-              <div className="absolute bottom-0 left-0 w-40 h-40 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 sm:w-40 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2" />
               <div className="relative">
-                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
-                  <FaBullseye className="text-4xl" />
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-5 sm:mb-6">
+                  <FaBullseye className="text-3xl sm:text-4xl" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-                <p className="text-green-100 text-lg leading-relaxed">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Our Mission</h3>
+                <p className="text-green-100 text-sm sm:text-lg leading-relaxed">
                   To provide integrated support through farming, training, finance, and market access, empowering rural communities to achieve economic independence.
                 </p>
               </div>
